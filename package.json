@@ -1,0 +1,16 @@
+{
+  "name": "junior-test",
+  "version": "1.0.0",
+  "description": "A summary of dev test ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only"
+  },
+  "author": "Luis Hdz",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.7.13",
+    "ts-node-dev": "^2.0.0"
+  }
+}
