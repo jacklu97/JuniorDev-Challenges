@@ -12,31 +12,19 @@
  *
  */
 
+import Pair from "./utils/Pair";
+
 enum Move {
     ROCK,
     SCISSORS,
     PAPER
 }
 
-class Pair<T> {
-    first: T;
-    second: T;
-
-    constructor(el1: T, el2: T) {
-        this.first = el1;
-        this.second = el2;
-    }
-
-    areEqual(): boolean {
-        return this.first === this.second;
-    }
-}
-
 const arrayListOf = (...elements: any) => {
     return [...elements];
 }
 
-const rockScissorsPaper = (movements: Array<Pair<Move>>): string => {
+const rockScissorsPaper = (movements: Array<Pair<Move, Move>>): string => {
     let player1 = 0;
     let player2 = 0;
 
