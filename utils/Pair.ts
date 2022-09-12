@@ -13,4 +13,17 @@ export default class Pair<T, K> {
 
         return (this.first as any) === (this.second as any);
     }
+
+    [Symbol.iterator](): Iterator<T | K> {
+        let counter = 0;
+        return {
+            next: () => {
+                counter++;
+                return {
+                    done: counter > 2,
+                    value: counter === 1 ? this.first : this.second
+                }
+            }
+        }
+    }
 }
